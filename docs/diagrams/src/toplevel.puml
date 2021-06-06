@@ -1,0 +1,14 @@
+@startuml MoonLander Simulator
+
+(*) -> "Create Agent \n 'Developing'" as dev
+
+dev -->[agent and id] "Run Simulation using agent" as run
+dev --> "Store agent"
+
+run -->[Log and agent id] "Store log" as store
+run -->[Log and agent id] "Evaluate output" as ev
+
+ev --> dev
+store --> "Graphical inspection"
+
+@enduml
